@@ -34,7 +34,7 @@ namespace QuanLyGiangVien.Controllers
         {
             DateTime aDateTime = DateTime.Now;
             var list = new List<int>();
-            for (int i = aDateTime.Year; i<= 1970 ; i--)
+            for (int i = aDateTime.Year; i>= 1970 ; i--)
             {
                 list.Add(i);
             }

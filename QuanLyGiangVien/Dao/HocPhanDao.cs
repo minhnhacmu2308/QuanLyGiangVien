@@ -26,8 +26,8 @@ namespace QuanLyGiangVien.Dao
         }
         public void add(string ten,int tinchi,int idLoaiHocPhan )
         {
-            string sql = "insert into HocPhans(tenhocphan,tinchi,LoaiHocPhan_id) values(@ten,@tinchi,@loaihocphanId)";
-            mydb.Database.ExecuteSqlCommand(sql,new SqlParameter("@ten",ten),new SqlParameter("@tinchi",tinchi),new SqlParameter("loaihocphanId", idLoaiHocPhan));
+            string sql = "insert into HocPhans(tenhocphan,tinchi,LoaiHocPhan_id) values(N'"+ ten+ "','"+tinchi+"','"+ idLoaiHocPhan + "')";
+            mydb.Database.ExecuteSqlCommand(sql);
         }
         public void edit(int id,string ten, int tinchi, int idLoaiHocPhan)
         {
